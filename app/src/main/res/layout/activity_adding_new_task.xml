@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="addingNewTaskVM" type="com.munirasapplication.app.modules.addingnewtask.data.viewmodel.AddingNewTaskVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearAddingnewtask"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylelime_100">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumntaskdetails"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylebluegray_100_7fcornerRadius">
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtTaskDetails"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_43pxv"
+                android:layout_marginEnd="@dimen/_37pxh"
+                android:layout_marginStart="@dimen/_37pxh"
+                android:layout_marginTop="@dimen/_30pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{addingNewTaskVM.addingNewTaskModel.txtTaskDetails}"
+                style="@style/txtPoppinssemibold20" tools:text="@string/lbl_task_details"/>
+        </LinearLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtAdddetails"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_35pxh"
+            android:layout_marginStart="@dimen/_35pxh"
+            android:layout_marginTop="@dimen/_31pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{addingNewTaskVM.addingNewTaskModel.txtAdddetails}"
+            style="@style/txtPoppinssemibold18" tools:text="@string/lbl_add_details"/>
+        <EditText android:ellipsize="end"
+            android:hint="@string/lbl_activity"
+            android:id="@+id/etGroupThirteen" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_35pxh"
+            android:layout_marginStart="@dimen/_35pxh"
+            android:layout_marginTop="@dimen/_51pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_4pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_9pxh"
+            android:singleLine="true"
+            android:text="@={addingNewTaskVM.addingNewTaskModel.etGroupThirteenValue}"
+            android:textColorHint="@color/black_900"
+            style="@style/etPolyregular16" tools:ignore="Autofill"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtDescription"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_48pxh"
+            android:layout_marginStart="@dimen/_48pxh"
+            android:layout_marginTop="@dimen/_81pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{addingNewTaskVM.addingNewTaskModel.txtDescription}"
+            style="@style/txtPolyregular16" tools:text="@string/lbl_description"/>
+        <View android:background="@color/black_900"
+            android:id="@+id/lineLineTwo"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_1pxv"
+            android:layout_marginEnd="@dimen/_35pxh"
+            android:layout_marginStart="@dimen/_35pxh"
+            android:layout_marginTop="@dimen/_1pxv" android:layout_width="@dimen/_277pxh"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnSave"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_51pxv"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_35pxh"
+            android:layout_marginStart="@dimen/_35pxh"
+            android:layout_marginTop="@dimen/_155pxv"
+            android:layout_width="@dimen/_187pxh"
+            android:paddingBottom="@dimen/_15pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_15pxv" android:singleLine="true"
+            android:text="@string/lbl_save" android:textAllCaps="false"
+            style="@style/btnSolidRounded_3" tools:text="@string/lbl_save"/>
+    </LinearLayout>
+</layout>

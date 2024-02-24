@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homescreenVM" type="com.munirasapplication.app.modules.homescreen.data.viewmodel.HomescreenVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameHomescreen"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylelime_100">
+        <LinearLayout android:id="@+id/linearColumnlanguage"
+            android:layout_gravity="top|start"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_10pxv"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar android:gravity="start"
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:id="@+id/linearRowlanguage"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <FrameLayout android:id="@+id/frameStacklanguage"
+                        android:layout_height="@dimen/_88pxv" android:layout_width="@dimen/_165pxh">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtLanguage"
+                            android:layout_gravity="bottom|start"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_19pxv"
+                            android:layout_marginEnd="@dimen/_37pxh"
+                            android:layout_marginStart="@dimen/_37pxh"
+                            android:layout_marginTop="@dimen/_19pxv"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{homescreenVM.homescreenModel.txtLanguage}"
+                            style="@style/txtPoppinssemibold25" tools:text="@string/lbl_tasks"/>
+                        <ImageView android:id="@+id/imageEllipseOne"
+                            android:layout_gravity="start"
+                            android:layout_height="@dimen/_88pxh"
+                            android:layout_width="@dimen/_165pxh"
+                            android:scaleType="fitXY"
+                            imageRes="@{@drawable/img_ellipse1}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse1"/>
+                    </FrameLayout>
+                    <ImageView android:id="@+id/imageMaximize"
+                        android:layout_height="@dimen/_36pxh"
+                        android:layout_marginBottom="@dimen/_21pxv"
+                        android:layout_marginStart="@dimen/_130pxh"
+                        android:layout_marginTop="@dimen/_31pxv"
+                        android:layout_width="@dimen/_44pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_maximize"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_maximize"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowstarone"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_144pxh"
+                android:layout_marginStart="@dimen/_13pxh"
+                android:layout_marginTop="@dimen/_30pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageStarOne"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_star1"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_star1"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDentistappoint"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.86"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{homescreenVM.homescreenModel.txtDentistappoint}"
+                    style="@style/txtPolyregular16" tools:text="@string/msg_dentist_appoint"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowstartwo"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_209pxh"
+                android:layout_marginStart="@dimen/_13pxh"
+                android:layout_marginTop="@dimen/_44pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageStarTwo"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_star2"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_star2"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLanguageOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.77"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{homescreenVM.homescreenModel.txtLanguageOne}"
+                    style="@style/txtPolyregular16" tools:text="@string/lbl_feed_puppy"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnNewTask"
+                android:layout_height="@dimen/_63pxv"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_345pxv"
+                android:layout_width="@dimen/_158pxh"
+                android:paddingBottom="@dimen/_21pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_21pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_new_task"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded" tools:text="@string/lbl_new_task"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

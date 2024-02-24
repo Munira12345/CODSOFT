@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">munira_s_application4</string>
+    <string name="loading">Loading…</string>
+    <string name="no_internet_connection">No internet connection!</string>
+<string name="lbl_edit_activity">Edit Activity</string>
+  <string name="msg_dentist_appoint">Dentist appointment</string>
+  <string name="lbl_sign_in">Sign In</string>
+  <string name="lbl_email_address">Email Address</string>
+  <string name="lbl_already_a_user">Already a user?</string>
+  <string name="lbl_sign_up">Sign Up</string>
+  <string name="lbl_password">Password</string>
+  <string name="lbl_task_details">Task Details</string>
+  <string name="lbl_feed_puppy">Feed puppy </string>
+  <string name="lbl_activity">Activity</string>
+  <string name="lbl_description">Description</string>
+  <string name="lbl_login">Login </string>
+  <string name="lbl_tasks">Tasks </string>
+  <string name="lbl_new_task">New Task</string>
+  <string name="lbl_save">SAVE</string>
+  <string name="lbl_create_account">Create Account</string>
+  <string name="lbl_add_details">Add details</string>
+</resources>

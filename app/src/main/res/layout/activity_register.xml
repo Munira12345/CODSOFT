@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="registerVM"
+            type="com.munirasapplication.app.modules.register.data.viewmodel.RegisterVM" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linearRegister"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        style="@style/groupStylelime_100">
+
+        <LinearLayout
+            android:id="@+id/linearColumncreateaccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_37pxh"
+            android:layout_marginTop="@dimen/_131pxv"
+            android:layout_marginEnd="@dimen/_37pxh"
+            android:orientation="vertical"
+            style="@style/groupStylegray_300cornerRadius">
+
+            <TextView
+                android:id="@+id/txtCreateAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_54pxh"
+                android:layout_marginTop="@dimen/_30pxv"
+                android:layout_marginEnd="@dimen/_54pxh"
+                android:gravity="start"
+                android:singleLine="true"
+                android:text="@{registerVM.registerModel.txtCreateAccount}"
+                android:ellipsize="end"
+                style="@style/txtPolyregular24"
+                tools:text="@string/lbl_create_account" />
+
+            <EditText
+                android:id="@+id/edtEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginTop="@dimen/_39pxv"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:hint="Type your Email"
+                android:inputType="textEmailAddress"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginTop="@dimen/_21pxv"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:hint="Type Your Password"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+                        <Button
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnSignUp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_49pxv"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="wrap_content"
+                android:paddingBottom="@dimen/_9pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_9pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_sign_up"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_2" tools:text="@string/lbl_sign_up"/>
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtAlreadyauser"
+            style="@style/txtPolyregular16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/_111pxh"
+            android:layout_marginTop="@dimen/_97pxv"
+            android:layout_marginEnd="@dimen/_111pxh"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@{registerVM.registerModel.txtAlreadyauser}"
+            tools:text="@string/lbl_already_a_user" />
+
+        <TextView
+            android:id="@+id/txtSignIn"
+            style="@style/txtPolyregular16_1"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/_140pxh"
+            android:layout_marginTop="@dimen/_6pxv"
+            android:layout_marginEnd="@dimen/_140pxh"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@{registerVM.registerModel.txtSignIn}"
+            tools:text="@string/lbl_sign_in" />
+
+    </LinearLayout>
+</layout>

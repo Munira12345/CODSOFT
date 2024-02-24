@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="loginVM"
+            type="com.munirasapplication.app.modules.login.data.viewmodel.LoginVM" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/frameLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/groupStylelime_100">
+
+        <View
+            android:id="@+id/viewRectangleFive"
+            android:layout_width="@dimen/_283pxh"
+            android:layout_height="@dimen/_347pxh"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="@dimen/_67pxv"
+            android:layout_marginStart="@dimen/_38pxh"
+            android:layout_marginEnd="@dimen/_38pxh"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:background="@drawable/rectangle_bg_gray_300_radius_40" />
+
+        <LinearLayout
+            android:id="@+id/linearColumnlanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginStart="@dimen/_61pxh"
+            android:layout_marginEnd="@dimen/_61pxh"
+            android:layout_marginTop="@dimen/_122pxv"
+            android:layout_marginBottom="@dimen/_122pxv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_75pxh"
+                android:layout_marginEnd="@dimen/_75pxh"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="@{loginVM.loginModel.txtLanguage}"
+                style="@style/txtPolyregular24"
+                tools:text="@string/lbl_login" />
+
+            <EditText
+                android:id="@+id/edtEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_41pxv"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:hint="Type your Email"
+                android:inputType="textEmailAddress"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_29pxv"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:hint="Type Your Password"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/btnSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18pxv"
+                android:layout_marginStart="@dimen/_32pxh"
+                android:layout_marginEnd="@dimen/_32pxh"
+                android:layout_marginBottom="@dimen/_12pxv"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_12pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingBottom="@dimen/_12pxv"
+                android:text="@string/lbl_sign_in"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_2" tools:text="@string/lbl_sign_in"/> />
+
+        </LinearLayout>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "142929834483",
+    "project_id": "todoapp-2e3d4",
+    "storage_bucket": "todoapp-2e3d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142929834483:android:7fb640cced137ac32a2286",
+        "android_client_info": {
+          "package_name": "com.munirasapplication.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACoxXsxmgBU14x5JSmjuKrfR2jT7A3WMk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
