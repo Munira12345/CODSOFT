@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable name="addingNewTaskVM" type="com.munirasapplication.app.modules.addingnewtask.data.viewmodel.AddingNewTaskVM"/>
+
     </data>
     <LinearLayout android:gravity="center_horizontal"
         android:id="@+id/linearAddingnewtask"

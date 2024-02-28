@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable name="taskEditingVM" type="com.munirasapplication.app.modules.taskediting.data.viewmodel.TaskEditingVM"/>
+
     </data>
     <FrameLayout android:id="@+id/frameTaskediting"
         android:layout_height="match_parent"

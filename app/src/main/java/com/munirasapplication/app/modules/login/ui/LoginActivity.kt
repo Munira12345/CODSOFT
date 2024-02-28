@@ -53,6 +53,7 @@ class LoginActivity : AppCompatActivity() {
               updateUI(null)
             }
           }
+
       }
     }
   }

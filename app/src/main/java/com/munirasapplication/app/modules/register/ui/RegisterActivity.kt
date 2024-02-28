@@ -73,7 +73,9 @@ class RegisterActivity : AppCompatActivity() {
                         Toast.makeText(this, "Registration not successful: $errorMessage", Toast.LENGTH_SHORT).show()
 
                     }
+
                 }
+
 
 
         }

@@ -37,7 +37,7 @@ class TaskEditingActivity : AppCompatActivity() {
     // Fetch task details based on the task ID
     val taskDetails = fetchTaskDetails(taskId)
 
-    // Populate UI elements with task details
+    // Populate UI element with task details
     populateUI(taskDetails)
 
     btnSave1.setOnClickListener {
