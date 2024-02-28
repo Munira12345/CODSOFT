@@ -69,11 +69,11 @@
             android:layout_marginEnd="@dimen/_35pxh"
             android:layout_marginStart="@dimen/_35pxh"
             android:layout_marginTop="@dimen/_1pxv" android:layout_width="@dimen/_277pxh"/>
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:ellipsize="end" android:gravity="center"
             android:id="@+id/btnSave"
             android:layout_gravity="center_horizontal"
-            android:layout_height="@dimen/_51pxv"
+            android:layout_height="65.50dp"
             android:layout_marginBottom="@dimen/_20pxv"
             android:layout_marginEnd="@dimen/_35pxh"
             android:layout_marginStart="@dimen/_35pxh"

@@ -101,21 +101,24 @@
                     android:text="@{homescreenVM.homescreenModel.txtLanguageOne}"
                     style="@style/txtPolyregular16" tools:text="@string/lbl_feed_puppy"/>
             </LinearLayout>
-            <androidx.appcompat.widget.AppCompatButton
-                android:ellipsize="end" android:gravity="center"
-                android:id="@+id/btnNewTask"
-                android:layout_height="@dimen/_63pxv"
+
+            <Button
+                android:id="@+id/btnNewTask2"
+                style="@style/btnSolidRounded"
+                android:layout_width="272dp"
+                android:layout_height="92.44dp"
                 android:layout_marginStart="@dimen/_10pxh"
                 android:layout_marginTop="@dimen/_345pxv"
-                android:layout_width="@dimen/_158pxh"
-                android:paddingBottom="@dimen/_21pxv"
-                android:paddingEnd="@dimen/_30pxh"
+                android:ellipsize="end"
+                android:gravity="center"
                 android:paddingStart="@dimen/_30pxh"
                 android:paddingTop="@dimen/_21pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingBottom="@dimen/_21pxv"
                 android:singleLine="true"
                 android:text="@string/lbl_new_task"
                 android:textAllCaps="false"
-                style="@style/btnSolidRounded" tools:text="@string/lbl_new_task"/>
+                tools:text="@string/lbl_new_task" />
         </LinearLayout>
     </FrameLayout>
 </layout>

@@ -1,9 +1,13 @@
+package com.munirasapplication.app.modules.register.ui
+
+
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 //import com.google.firebase.auth.FirebaseAuth
 import com.munirasapplication.app.R
@@ -20,6 +24,7 @@ class RegisterActivity : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
 
+   // creating all objects for my register activity
         val edtEmailAddress: EditText = findViewById(R.id.edtEmailAddress)
         val edtPassword: EditText = findViewById(R.id.edtPassword)
         val btnSignUp: Button = findViewById(R.id.btnSignUp)
@@ -29,11 +34,19 @@ class RegisterActivity : AppCompatActivity() {
             // Handle click on sign-in text to navigate to login screen
             startActivity(Intent(this, LoginActivity::class.java))
         }
-
+// this will handle my email and password logic to firebase
         btnSignUp.setOnClickListener {
+            //what does this do? write it here
+            // val edtEmailAddress: EditText = edtEmailAddress.findViewById(R.id.edtEmailAddress)
+            // val edtPassword: EditText = edtPassword.findViewById(R.id.edtPassword)
+        }
+
+        // trim
             val email = edtEmailAddress.text.toString().trim()
             val password = edtPassword.text.toString().trim()
 
+
+        //  if (email.isNotEmpty() && password.isNotEmpty()) { do the firebaseAuth.
             if (email.isEmpty()) {
                 edtEmailAddress.error = "Please enter email"
                 return@setOnClickListener
@@ -44,17 +57,21 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+
+
             // Register the user with Firebase Authentication
             firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        // Registration success, navigate to home screen or desired activity
-                        // For example:
+                        // Registration success, navigate to home screen
+
+                        // val intent = Intent(this, HomescreenActivity::class.java) startActivity(intent)
                         startActivity(Intent(this, HomescreenActivity::class.java))
                         finish()
                     } else {
-                        // Registration failed, handle error
-                        // You can display a toast message or show an error dialog
+                        val errorMessage = task.exception?.message
+                        Toast.makeText(this, "Registration not successful: $errorMessage", Toast.LENGTH_SHORT).show()
+
                     }
                 }
 
