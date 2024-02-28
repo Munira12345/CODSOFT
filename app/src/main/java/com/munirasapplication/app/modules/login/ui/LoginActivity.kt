@@ -55,6 +55,7 @@ class LoginActivity : AppCompatActivity() {
           }
       }
     }
+  }
 
     private fun updateUI(user: FirebaseUser?) {
       if (user != null) {
@@ -65,7 +66,7 @@ class LoginActivity : AppCompatActivity() {
       } else {
         // User is signed out or sign-in failed
       }
-    }
+
   }
 }
 
