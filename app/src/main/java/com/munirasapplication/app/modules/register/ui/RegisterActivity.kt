@@ -9,7 +9,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-//import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuth
 import com.munirasapplication.app.R
 import com.munirasapplication.app.modules.homescreen.ui.HomescreenActivity
 import com.munirasapplication.app.modules.login.ui.LoginActivity
@@ -24,7 +24,7 @@ class RegisterActivity : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
 
-   // creating all objects for my register activity
+        // creating all objects for my register activity
         val edtEmailAddress: EditText = findViewById(R.id.edtEmailAddress)
         val edtPassword: EditText = findViewById(R.id.edtPassword)
         val btnSignUp: Button = findViewById(R.id.btnSignUp)
@@ -42,24 +42,11 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         // trim
-            val email = edtEmailAddress.text.toString().trim()
-            val password = edtPassword.text.toString().trim()
+        val email = edtEmailAddress.text.toString().trim()
+        val password = edtPassword.text.toString().trim()
 
 
-        //  if (email.isNotEmpty() && password.isNotEmpty()) { do the firebaseAuth.
-            if (email.isEmpty()) {
-                edtEmailAddress.error = "Please enter email"
-                return@setOnClickListener
-            }
-
-            if (password.isEmpty()) {
-                edtPassword.error = "Please enter password"
-                return@setOnClickListener
-            }
-
-
-
-            // Register the user with Firebase Authentication
+        if (email.isNotEmpty() && password.isNotEmpty()) {
             firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
@@ -70,18 +57,21 @@ class RegisterActivity : AppCompatActivity() {
                         finish()
                     } else {
                         val errorMessage = task.exception?.message
-                        Toast.makeText(this, "Registration not successful: $errorMessage", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            this,
+                            "Registration not successful: $errorMessage",
+                            Toast.LENGTH_SHORT
+                        ).show()
 
                     }
 
                 }
 
 
-
         }
 
     }
-
+}
 
 
   /*
