@@ -61,7 +61,7 @@
                 android:inputType="textPassword"
                 android:singleLine="true" />
 
-                        <Button
+            <Button
                 android:ellipsize="end" android:gravity="center"
                 android:id="@+id/btnSignUp"
                 android:layout_gravity="center_horizontal"
@@ -90,10 +90,9 @@
             style="@style/txtPolyregular16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginStart="@dimen/_111pxh"
-            android:layout_marginTop="@dimen/_97pxv"
-            android:layout_marginEnd="@dimen/_111pxh"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_30pxv"
+            android:visibility="visible"
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@{registerVM.registerModel.txtAlreadyauser}"
@@ -104,15 +103,12 @@
             style="@style/txtPolyregular16_1"
             android:layout_width="wrap_content"
             android:layout_height="17dp"
-            android:layout_gravity="end"
-            android:layout_marginStart="@dimen/_140pxh"
+            android:layout_gravity="center"
             android:layout_marginTop="@dimen/_6pxv"
-            android:layout_marginEnd="@dimen/_140pxh"
-            android:layout_marginBottom="@dimen/_20pxv"
+            android:visibility="visible"
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@{registerVM.registerModel.txtSignIn}"
             tools:text="@string/lbl_sign_in" />
-
     </LinearLayout>
 </layout>
